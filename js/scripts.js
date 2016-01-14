@@ -5,25 +5,28 @@ $("#troy").text = "";
 var whistle =$("input#age").val();
 for (i=1; i<=whistle; i++){
   $("#troy").prepend("<p>" + i +" Bottles of beer on the wall " + i + " bottles of beer, take one down pass it around " + (i-1) + " bottles of beer on the wall</p>");
-  $("p:eq(3)" ).remove();
+  $("p:eq(20)" ).remove();
 }
 
 
-var classicalVar = $("#classical1").val()
-if(classicalVar === "classical") {
+var musicVar = $("#music").val()
+if(musicVar === "classical") {
+  $("iframe").hide();
   $("#classicalIframe").show();
-}
-var hiphopVar = $("#hiphop1").val()
-if(hiphopVar === "hiphop") {
+}else if (musicVar ==="hiphop"){
+  $("iframe").hide();
+
   $("#hiphopeIframe").show();
-}
-var countryVar = $("#country1").val()
-if(countryVar === "country") {
-  $("#countryIframe").show();
-}var celineVar = $("#celine1").val()
-if(celineVar === "celine") {
+}else if (musicVar ==="country"){
+  $("iframe").hide();
+
+$("#countryIframe").show();
+}else if (musicVar ==="celine"){
+  $("iframe").hide();
+
   $("#celineIframe").show();
 }
+
 
 event.preventDefault();
 
